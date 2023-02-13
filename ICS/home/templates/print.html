@@ -1,0 +1,16 @@
+{% extends "theme.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="container">
+	<h5>PRINT YOUR ATTENDENCE</h5>
+	<br>
+    <form method="POST" class="form" style="width: 500px; background-color: lightgray;">
+        {% csrf_token %}
+      <button class="btn btn-warning" name="btn3">SEARCH</button>
+      </form>
+  {% for s in student %}
+  	<li>{{s.month}}</li>
+  {% endfor %}
+</div>
+{% endblock content %}

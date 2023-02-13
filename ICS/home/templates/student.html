@@ -1,0 +1,42 @@
+{% extends "theme.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+
+<div class="container">
+
+
+<h5>STUDENT DETAILS</h5>  
+<table class="table table-striped table-bordered"> 
+  <tr><th>  Reg No</th><th>Name</th><th>Address</th><th>Age</th><th>Gender</th><th>Course</th><th>Batch_time</th><th>Phone_no</th><th>Email</th></tr>
+  {% for c in connect %}
+  <tr><td>{{c.register_no}}</td><td>{{c.name}}</td><td>{{c.address}}</td><td>{{c.age}}</td><td>{{c.gender}}</td>
+    <td>{{c.course}}</td><td>{{c.batch_time}}</td><td>{{c.phone_no}}</td><td>{{c.email}}</td></tr> 
+    {% endfor %} 
+</table>
+
+   <br>
+  <h5>STUDENT ATTENDENCE</h5> 
+  <table class="table table-striped table-bordered"> 
+    <tr><th>Reg No</th><th>year</th><th>Month</th><th>Present</th><th>Attendence</th><th>Total working Days</th></tr>  
+    {% for i in attend %}
+    <tr><td>{{i.register_no}}</td><td>{{i.year}}</td><td>{{i.month}}</td><td>{{i.present}}</td>
+    <td>{{i.absent}}</td><td>{{i.present|add:i.absent}}</td></tr> 
+    {% endfor %}
+   </table>
+    
+   <br>
+  <h5>STUDENT MARK</h5>
+  <table class="table table-striped table-bordered"> 
+    <tr><th>Reg No</th><th>Date</th><th>Theory mark</th><th>Practical mark</th><th>Total mark</th></tr>  
+    {% for m in mark %}
+    <tr><td>{{m.register_no}}</td><td>{{m.exam_date}}</td><td>{{m.mark_theory}}</td><td>{{m.mark_pratical}}</td>
+      <td>{{m.mark_theory|add:m.mark_pratical}} </td></tr> 
+    {% endfor %}
+ </table>
+
+
+</div>
+
+{% endblock content %}

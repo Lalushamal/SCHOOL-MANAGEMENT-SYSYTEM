@@ -1,0 +1,15 @@
+{% extends "theme.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="container">
+	<h5>ADD YOUR ATTENDENCE</h5>
+	<br>
+ <form method="POST" class="form" > 
+	{% csrf_token %}
+	{{ forme|crispy }}
+	<button type="submit" class="btn btn-primary mb-3">SUBMIT</button>	
+  </form>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,60 @@
+{% load static  %}
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>ICS</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+    
+</head>  
+<body>  
+  
+<nav class="navbar navbar-inverse">  
+  <div class="container-fluid">  
+    <div class="navbar-header">  
+      <a class="navbar-brand" href="/">ICS</a>  
+    </div>  
+    <ul class="nav navbar-nav">  
+      <li><a href="/register">REGISTER</a></li> 
+       
+        
+      </li>  
+      <li><a href="#">COURSE</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="caret"></span></a>  
+        <ul class="dropdown-menu">  
+          <li><a href="/course">ADD COURSE</a></li>
+          <li><a href="/attendence">ADD STUDENT ATTENDENCE</a></li>
+          <li><a href="/mark">ADD STUDENT MARK</a></li>  
+        </ul> 
+      <li><a href="/student">STUDENT STATIC</a></li>
+      <li class="active"><a href="#">BATCH TIME</a></li> 
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="caret"></span></a>  
+        <ul class="dropdown-menu">  
+          <li><a href="#">9  TO  12</a></li>  
+          <li><a href="#">12 TO  2</a></li>  
+          <li><a href="#">2  TO  5</a></li>  
+        </ul>  
+        <li class="active"><a href="#">GET DATA</a></li> 
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="/getpdf">ALL DETAIL</a></li>
+        <li><a href="/attend">MONTH ATTENDENCE</a></li>
+        </ul> 
+    </ul>  
+    <ul class="nav navbar-nav navbar-right">  
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>  
+      <li><a href="/accounts/login"><span class="glyphicon glyphicon-log-in"></span> LOG OUT</a></li>  
+    </ul>  
+  </div>  
+</nav>  
+
+
+{% block content %}
+
+{% endblock content %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+</body>  
+</html>  
